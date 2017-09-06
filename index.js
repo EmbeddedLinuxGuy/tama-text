@@ -10,11 +10,19 @@ var rl = readline.createInterface({
 });
 const tty_out = process.stdout;
 if (process.argv.length != 3) {
-    process.stderr.write("Usage: " + process.argv[1]
+    process.stderr.write("Usage: "
+			 + process.argv[1]
 			 + " char.json\n");
     process.exit(1);
 }
 
 const json_in = process.argv[2];
-tama.start(tty_out, fs.readFileSync(json_in));
+fs.readFile(json_in, function (e, c) {
+    if (e) {
+	tama.init(tty_out, json_in);
+    } else {
+	tama.start(tty_out, c);
+    }
+});
+
 rl.on('line', tama.handle);
