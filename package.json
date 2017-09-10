@@ -1,0 +1,22 @@
+{
+   "name": "tama-text",
+   "version": "0.0.1",
+   "description": "Text interface for Tama-Yaru, a game of travel and adventure",
+   "main": "index.js",
+   "scripts": {
+      "test": "./test.sh"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/embeddedLinuxGuy/tama-text.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/embeddedLinuxGuy/tama-text/issues"
+   },
+   "dependencies": {
+      "tama-yaru": "file:../tama"
+   },
+   "homepage": "https://github.com/embeddedLinuxGuy/tama-text#readme"
+}
