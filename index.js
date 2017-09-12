@@ -17,12 +17,5 @@ if (process.argv.length != 3) {
 }
 
 const json_in = process.argv[2];
-fs.readFile(json_in, function (e, c) {
-    if (e) {
-	tama.init(tty_out, json_in);
-    } else {
-	tama.start(tty_out, c);
-    }
-});
-
+tama.init(tty_out, json_in);
 rl.on('line', tama.handle);
